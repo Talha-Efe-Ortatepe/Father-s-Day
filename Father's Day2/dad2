@@ -1,0 +1,33 @@
+import turtle
+
+# Ekranı ayarla
+screen = turtle.Screen()
+screen.title("Babalar Günü Kutlu Olsun!")
+screen.bgcolor("lightblue")
+
+# Kalp çizimi
+def draw_heart():
+    turtle.color('red')
+    turtle.begin_fill()
+    turtle.left(50)
+    turtle.forward(133)
+    turtle.circle(50, 200)
+    turtle.right(140)
+    turtle.circle(50, 200)
+    turtle.forward(133)
+    turtle.end_fill()
+
+# Kalbi çiz
+turtle.penup()
+turtle.goto(0, -100)
+turtle.pendown()
+draw_heart()
+
+# Yazı yaz
+turtle.penup()
+turtle.goto(0, 80)
+turtle.color("darkblue")
+turtle.hideturtle()
+turtle.write("Babalar Günün Kutlu Olsun!", align="center", font=("Arial", 18, "bold"))
+
+turtle.done()
